@@ -14,7 +14,7 @@ public class QueryParam
 			.queryParam("page",2)
 		.when()
 			.get("/api/users/")
-		.then().assertThat().statusCode(200).log().all()
+		.then().assertThat().statusCode(200).log().all();
 			
 	}
 }

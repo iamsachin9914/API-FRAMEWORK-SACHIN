@@ -16,7 +16,7 @@ public class BearerToken
 		baseURI="https://api.github.com";
 		HashMap hm=new HashMap();
 		hm.put("name","SDET-36-AUTH");
-		hm.put("description", "RestAssured bearer token check")
+		hm.put("description", "RestAssured bearer token check");
 		given()
 			.auth()
 			.oauth2("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")

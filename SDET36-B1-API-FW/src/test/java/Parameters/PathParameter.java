@@ -1,4 +1,4 @@
-package DataDrivenTesting;
+package Parameters;
 
 import org.testng.annotations.Test;
 

@@ -1,7 +1,7 @@
 package DataDrivenTesting;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import POJOclassForDDT.MultipleProjectDetails;
+import POJOclasses.ProjectLibrary;
 import io.restassured.http.ContentType;
 import static io.restassured.RestAssured.*;
 import java.util.Random;
@@ -13,11 +13,11 @@ public class CreateMultipleProject
 	{
 		Random r=new Random();
 		int ran=r.nextInt(500);
-		MultipleProjectDetails mp=new MultipleProjectDetails(createdBy,projectName+ran,status,teamSize);
+		ProjectLibrary pl=new ProjectLibrary(createdBy,projectName+ran,status,teamSize);
 		basePath="http://localhost:8084";
 		
 		given()
-		 .body(mp)
+		 .body(pl)
 		 .contentType(ContentType.JSON)
 	   
 		.when()
