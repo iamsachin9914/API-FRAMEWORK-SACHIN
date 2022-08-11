@@ -35,7 +35,7 @@ public class CreateProjectVerifyInDB extends BaseAPIclass
 		String expData = rLib.getJsonData(res,"projectId");
 		Reporter.log(expData,true);
 		
-		String Query="select * from project;";
+		String Query="select * from project";
 		System.out.println(Query);
 		
 		dLib.readDataFromDBandValidate(Query,1,expData);
