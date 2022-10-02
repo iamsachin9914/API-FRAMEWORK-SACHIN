@@ -19,7 +19,6 @@ import java.sql.SQLException;
 
 public class CreateProjectVerifyInDB extends BaseAPIclass
 {
-
 	@Test
 	public void createAndVerifyProject() throws SQLException
 	{
@@ -31,13 +30,10 @@ public class CreateProjectVerifyInDB extends BaseAPIclass
 		.when()
 			.post(EndPointsLibrary.createProject);
 		res.then().log().all();
-		
 		String expData = rLib.getJsonData(res,"projectId");
 		Reporter.log(expData,true);
-		
 		String Query="select * from project";
 		System.out.println(Query);
-		
 		dLib.readDataFromDBandValidate(Query,1,expData);
 			
 	}

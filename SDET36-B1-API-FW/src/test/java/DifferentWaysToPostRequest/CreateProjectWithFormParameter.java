@@ -19,8 +19,6 @@ public class CreateProjectWithFormParameter
 		port = 8084;
 		Random r=new Random();
 		int ran = r.nextInt(200);
-		
-		
 		given()
 			.formParam("createdBy", "Sachin")
 			.formParam("projectName", "Xylem"+ran)
